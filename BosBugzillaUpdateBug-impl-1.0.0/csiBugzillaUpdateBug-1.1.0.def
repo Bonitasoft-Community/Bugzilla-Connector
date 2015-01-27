@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition:ConnectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1">
+  <id>csiBugzillaUpdateBug</id>
+  <version>1.1.0</version>
+  <category id="CSI"/>
+  <input mandatory="true" name="url" type="java.lang.String"/>
+  <input mandatory="true" name="uid" type="java.lang.String"/>
+  <input mandatory="true" name="pwd" type="java.lang.String"/>
+  <input mandatory="true" name="bugid" type="java.lang.String"/>
+  <input mandatory="false" name="product" type="java.lang.String"/>
+  <input mandatory="false" name="component" type="java.lang.String"/>
+  <input mandatory="false" name="summary" type="java.lang.String"/>
+  <input mandatory="false" name="description" type="java.lang.String"/>
+  <input mandatory="false" name="version" type="java.lang.String"/>
+  <input mandatory="false" name="op_sys" type="java.lang.String"/>
+  <input mandatory="false" name="platform" type="java.lang.String"/>
+  <input mandatory="false" name="priority" type="java.lang.String"/>
+  <input mandatory="false" name="severity" type="java.lang.String"/>
+  <input mandatory="false" name="status" type="java.lang.String"/>
+  <input name="asignee" type="java.lang.String"/>
+  <input name="qa_contact" type="java.lang.String"/>
+  <input name="cc" type="java.lang.String"/>
+  <input name="category" type="java.lang.String"/>
+  <input name="deadline" type="java.util.Date"/>
+  <input name="expVendor" type="java.lang.String"/>
+  <output name="bugID" type="java.lang.String"/>
+  <page id="Connectivity">
+    <widget xsi:type="definition:Text" id="url" inputName="url"/>
+    <widget xsi:type="definition:Text" id="uid" inputName="uid"/>
+    <widget xsi:type="definition:Text" id="pwd" inputName="pwd"/>
+  </page>
+  <page id="bugDetails">
+    <widget xsi:type="definition:Text" id="bugid" inputName="bugid"/>
+    <widget xsi:type="definition:Text" id="product" inputName="product"/>
+    <widget xsi:type="definition:Text" id="version" inputName="version"/>
+    <widget xsi:type="definition:Text" id="component" inputName="component"/>
+    <widget xsi:type="definition:Text" id="summary" inputName="summary"/>
+    <widget xsi:type="definition:Text" id="description" inputName="description"/>
+    <widget xsi:type="definition:Text" id="priority" inputName="priority"/>
+    <widget xsi:type="definition:Text" id="severity" inputName="severity"/>
+    <widget xsi:type="definition:Text" id="status" inputName="status"/>
+  </page>
+  <page id="TechnicalDetails">
+    <widget xsi:type="definition:Text" id="op_sys" inputName="op_sys"/>
+    <widget xsi:type="definition:Text" id="platform" inputName="platform"/>
+    <widget xsi:type="definition:Text" id="asignee" inputName="asignee"/>
+    <widget xsi:type="definition:Text" id="qa_contact" inputName="qa_contact"/>
+    <widget xsi:type="definition:Text" id="cc" inputName="cc"/>
+    <widget xsi:type="definition:Text" id="category" inputName="category"/>
+    <widget xsi:type="definition:Text" id="deadline" inputName="deadline"/>
+    <widget xsi:type="definition:Text" id="expVendor" inputName="expVendor"/>
+  </page>
+</definition:ConnectorDefinition>
